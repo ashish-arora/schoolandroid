@@ -20,4 +20,6 @@
     <dimen name="list_item_caption">12sp</dimen>
     <dimen name="list_item_button">14sp</dimen>
     
+    <dimen name="list_item_student_row">50dp</dimen>
+    
 </resources>

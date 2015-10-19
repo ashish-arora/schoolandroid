@@ -1,16 +1,24 @@
 package com.nukleap.schoolchap;
 
-import android.support.v7.app.ActionBarActivity;
+import com.nukleap.schoolchap.classes.InternetUtils;
+import com.nukleap.schoolchap.comms.ConnectionManager;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActivityCommon {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		setMaterialDesign();
+		if(InternetUtils.getInstance(getApplicationContext()).available()){
+			//ConnectionManager.getInstance(getApplicationContext()).login();
+			//ConnectionManager.getInstance(getApplicationContext()).createOrg();
+		}
 	}
 
 	@Override
